@@ -13,6 +13,7 @@ import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 
+
 // Configurations
 
 const __filename = fileURLToPath(import.meta.url);
@@ -62,9 +63,8 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log('Connected to Database')
+    console.log("Connected to Database");
+    app.listen(PORT, () => console.log(`Server Port: ${PORT}`));   
   })
   .catch((error) => console.log(`${error} did not connect`));
 
-
-app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
