@@ -26,6 +26,7 @@ export const getUserFriends = async (req, res) => {
             })
         );
 
+        // for frontend
         const formattedFriends = friends.map(({ _id, firstName, lastName, occupation, location, picturePath }) => {
             return { _id, firstName, lastName, occupation, location, picturePath };
         }
